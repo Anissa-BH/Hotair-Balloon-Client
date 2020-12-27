@@ -1,0 +1,32 @@
+<div *ngFor="let haBalloon of haBalloons" class="card card-body mb-2">
+    <div class="row">
+        <div class="col-md-8">
+            <ul>
+                <li>
+                   id: {{haBalloon.id}} 
+                </li>
+                <li>
+                    label: {{haBalloon.label}}
+                </li>
+                <li>
+                    size: {{haBalloon.size}}
+                </li>
+                <li>
+                    Passenger number: {{haBalloon.passengersNumber}}
+                </li>
+                <li>
+                    color: {{haBalloon.color}}
+                </li>
+            </ul>
+            <button class="btn btn-danger" (click)="deleteHaBalloon(haBalloon.id)">
+                Delete
+            </button>
+            <button class="btn btn-secondary" [routerLink]="['/haballoon/edit', haBalloon.id]">
+                Edit
+            </button>
+        </div>  
+        <div class="col-md-4">
+
+        </div>      
+    </div>
+</div>
